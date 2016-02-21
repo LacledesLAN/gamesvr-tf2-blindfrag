@@ -3,30 +3,30 @@
 	"1" 
 	{ 
 		"type"		"S" 
-		"text"		"{ORANGE}Next map change is in {TIMELEFT}." 
+		"text"		"{ORANGE}Please read the server messages out loud to your teammate to promote JOLLY COOPERATION." 
 		"flags"		"" 
 	} 
 	"2" 
  	{ 
  		"type"		"S" 
- 		"text"		"{ORANGE}Current map: {DEFAULT}{CURRENTMAP}" 
+ 		"text"		"{ORANGE}If you can read this, and you're touching the mouse or keyboard, YOU ARE CHEATING. Please play fair!" 
  	} 
  	"3" 
  	{ 
  		"type"		"S" 
- 		"text"		"{ORANGE}Join our Steam group! http://steamcommunity.com/groups/lacledes_lan" 
+ 		"text"		"{ORANGE}Be patient with your teammate! They cannot see!" 
  		"flags"		"" 
  	}		 
  	"4" 
  	{ 
  		"type"		"S" 
- 		"text"		"{ORANGE}Just say '!nominate' to nominate a map for voting." 
+ 		"text"		"{ORANGE}Remember, the Heavy's minigun does less damage at range. Get up close to mow 'em down!" 
  		"flags"		"" 
  	} 
  	"5" 
  	{ 
  		"type"		"S" 
- 		"text"		"{ORANGE}Say '!rtv' in order to call for a mapvote." 
+ 		"text"		"{ORANGE}Remember to congratulate your teammate for playing well!" 
  		"flags"		"" 
  	} 
  	"6" 
@@ -50,7 +50,7 @@
  	"9" 
  	{ 
  		"type"		"S" 
- 		"text"		"{ORANGE} Aim for the admins. They like getting shot. Really!" 
+ 		"text"		"{ORANGE} Join our Steam group! http://steamcommunity.com/groups/lacledes_lan." 
  		"flags"		"" 
  	} 
  } 
