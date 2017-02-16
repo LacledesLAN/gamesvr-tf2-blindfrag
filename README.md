@@ -1,1 +1,1 @@
-# gamesvr-srcds-csgo-tourney
+# gamesvr-srcds-tf2-blindfrag
