@@ -2,9 +2,13 @@
 
 FROM lacledeslan/gamesvr-tf2
 
-LABEL maintainer "Laclede's LAN <contact@lacledeslan.com>"
-
-ENV IMAGE="gamesvr-tf2-blindfrag"
+LABEL MAINTAINER="Laclede's LAN <contact@lacledeslan.com>" `
+      org.label-schema.url="https://github.com/LacledesLAN" `
+      org.label-schema.vendor="Laclede's LAN" `
+      org.label-schema.vcs-ref=$VCS_REF `
+      org.label-schema.name="gamesvr-tf2-blindfrag" `
+      org.label-schema.description="LL Team Fortress 2 Blind-Frag Server" `
+      org.label-schema.vcs-url="https://github.com/LacledesLAN/gamesvr-tf2-blindfrag"
 
 HEALTHCHECK NONE
 
