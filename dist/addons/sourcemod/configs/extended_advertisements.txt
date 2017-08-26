@@ -1,56 +1,35 @@
-"Advertisements" 
-{ 
-	"1" 
-	{ 
-		"type"		"S" 
-		"text"		"{ORANGE}Please read the server messages out loud to your teammate to promote JOLLY COOPERATION." 
-		"flags"		"" 
-	} 
-	"2" 
- 	{ 
- 		"type"		"S" 
- 		"text"		"{ORANGE}If you can read this, and you're touching the mouse or keyboard, YOU ARE CHEATING. Please play fair!" 
- 	} 
- 	"3" 
- 	{ 
- 		"type"		"S" 
- 		"text"		"{ORANGE}Be patient with your teammate! They cannot see!" 
- 		"flags"		"" 
- 	}		 
- 	"4" 
- 	{ 
- 		"type"		"S" 
- 		"text"		"{ORANGE}Remember, the Heavy's minigun does less damage at range. Get up close to mow 'em down!" 
- 		"flags"		"" 
- 	} 
- 	"5" 
- 	{ 
- 		"type"		"S" 
- 		"text"		"{ORANGE}Remember to congratulate your teammate for playing well!" 
- 		"flags"		"" 
- 	} 
- 	"6" 
- 	{ 
- 		"type"		"S" 
- 		"text"		"{ORANGE}We're on Twitter! Tweet us at @LacledesLAN." 
- 		"flags"		"" 
- 	}	 
- 	"7" 
- 	{ 
- 		"type"		"S" 
- 		"text"		"{ORANGE}If there are any problems feel free to talk to the staff at the admin table." 
- 		"flags"		"" 
- 	} 
- 	"8" 
- 	{ 
- 		"type"		"S" 
- 		"text"		"{ORANGE}Alltalk is handled by a plugin. Currently sv_alltalk is {DEFAULT}{CONVAR_BOOL:sv_alltalk}." 
- 		"flags"		"" 
- 	} 
- 	"9" 
- 	{ 
- 		"type"		"S" 
- 		"text"		"{ORANGE} Join our Steam group! http://steamcommunity.com/groups/lacledes_lan." 
- 		"flags"		"" 
- 	} 
- } 
+"Advertisements"
+{
+	"1"
+	{
+		"type"		"C"
+		"text"		"www.domain.com"
+	}
+	"2"
+	{
+		"type"		"CH"
+		"text"		"contact@domain.com"
+	}
+	"3"
+	{
+		"type"		"M"
+		"text"		"Next map is {NEXTMAP} in {TIMELEFT} minutes."
+		"flags"		"cft"
+	}
+	"4"
+	{
+		"type"		"S"
+		"text"		"{GREEN}Current {LIGHTGREEN}Map: {DEFAULT}{CURRENTMAP}"
+	}
+	"5"
+	{
+		"type"		"T"
+		"text"		"{ORANGE}friendly fire is {CONVAR_BOOL:mp_friendlyfire}."
+	}
+	"6"
+	{
+		"type"		"S"
+		"text"		"{GREEN}Admins: Sourcemod version is {CONVAR:sourcemod_version} and advertisement plugin version is {CONVAR:sm_extended_advertisements_version}"
+		"flags"		"z"
+	}
+}
