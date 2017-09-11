@@ -17,7 +17,9 @@ COPY ./dist /app/tf/
 COPY ./dist.linux /app/tf/
 
 # UPDATE USERNAME
-RUN usermod -l TF2BlindFrag TF2
+RUN usermod -l TF2BlindFrag TF2 &&`
+    find /app -type d -exec chmod 775 {} + &&`
+    chmod +x /app/ll-tests/*.sh
 
 USER TF2BlindFrag
 
