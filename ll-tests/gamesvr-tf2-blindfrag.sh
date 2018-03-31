@@ -2,8 +2,8 @@
 
 #####################################################################################################
 ### CONFIG VARS #####################################################################################
-declare LLTEST_CMD="/app/srcds_run -game tf -console +map koth_harvest_final +maplist mapcycle_quickplay_koth -insecure -maxplayers 8 -norestart +sv_lan 1";
-declare LLTEST_NAME="gamesvr-tf2-$(date '+%H%M%S')";
+declare LLTEST_CMD="/app/srcds_run -game tf -console +map koth_lumberyard +maplist mapcycle_quickplay_koth -insecure -maxplayers 8 -norestart +sv_lan 1";
+declare LLTEST_NAME="gamesvr-tf2-blindfrag-$(date '+%H%M%S')";
 #####################################################################################################
 #####################################################################################################
 
@@ -149,8 +149,11 @@ fi;
 should_have 'Using default binary: ./srcds_linux' 'Sever started executing';
 should_lack 'Server restart in 10 seconds' 'Server is not boot-looping';
 should_lack 'Running the dedicated server as root' 'Server is not running under root';
+should_lack 'Failed to load 32-bit libtinfo.so.5 or libncurses.so.5' 'Server has dependency "lib32tinfo5"';
+should_lack 'map load failed:' 'server unable to find custom-content map';
 should_have 'server_srv.so loaded for "Team Fortress"' 'srcds_run loaded Team Fortress 2';
 should_have 'Server is hibernating' 'srcds_run succesfully hibernated';
+should_echo "sv_cheats" '"sv_cheats" = "0"';
 
 # Check SourceMod/MetaMod plugins
 should_have '[SM/MM Information]' 'Meta Mod and Source Mod are both running';
@@ -163,6 +166,8 @@ should_have '"Basic Comm Control" (' 'LL status mod reports basic comm control';
 should_have '"Basic Info Triggers" (' 'LL status mod reports basic info triggers';
 should_have '"Anti-Flood" (' "LL status mod reports anti-flood";
 should_have '"Basic Votes" (' "LL status mod reports basic votes";
+
+# Check Blindfrag specific SoureMod/MetaMod plugins
 should_have '"TF2 Class Restrictions" (' "LL status mod reports class restrictions";
 
 # Verify sending commands is working
