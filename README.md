@@ -12,13 +12,13 @@ Docker image for LL [Team Fortress 2](http://store.steampowered.com/app/440/) "B
 ### Download
 
 ```shell
-docker pull lacledeslan/gamesvr-tf2-blindfrag
+docker pull lacledeslan/gamesvr-tf2-blindfrag;
 ```
 
 ### Run self tests
 
 ```shell
-docker run -it --rm lacledeslan/gamesvr-tf2-blindfrag ./ll-tests/gamesvr-tf2-blindfrag.sh
+docker run -it --rm lacledeslan/gamesvr-tf2-blindfrag ./ll-tests/gamesvr-tf2-blindfrag.sh;
 ```
 
 ### Run simple interactive server
