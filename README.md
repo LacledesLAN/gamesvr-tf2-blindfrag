@@ -15,7 +15,9 @@ Docker image for LL [Team Fortress 2](http://store.steampowered.com/app/440/) "B
 docker pull lacledeslan/gamesvr-tf2-blindfrag;
 ```
 
-### Run self tests
+### Run Self Tests
+
+The image includes a test script that can be used to verify its contents. No changes or pull-requests will be accepted to this repository if any tests fail.
 
 ```shell
 docker run -it --rm lacledeslan/gamesvr-tf2-blindfrag ./ll-tests/gamesvr-tf2-blindfrag.sh;
