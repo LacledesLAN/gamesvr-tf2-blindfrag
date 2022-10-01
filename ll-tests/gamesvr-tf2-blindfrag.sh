@@ -155,23 +155,35 @@ should_have 'server_srv.so loaded for "Team Fortress"' 'srcds_run loaded Team Fo
 should_have 'Server is hibernating' 'srcds_run succesfully hibernated';
 should_echo "sv_cheats" '"sv_cheats" = "0"';
 
-# Check SourceMod/MetaMod plugins
-should_have '[SM/MM Information]' 'Meta Mod and Source Mod are both running';
-should_have '===BEGIN SERVER STATUS===' 'LL status mod ran';
-should_lack '<Error> "' 'LL status mod is not showing any SM plugins with errors'
-should_have '"Server Status-LL MOD" (' 'LL status mod reports itself';
-should_have '"Admin File Reader" (' 'LL status mod reports admin file reader';
-should_have '"Log Connections - LL Mod" (' 'LL status mod reports LL version of "log connections"';
-should_have '"Basic Comm Control" (' 'LL status mod reports basic comm control';
-should_have '"Basic Info Triggers" (' 'LL status mod reports basic info triggers';
-should_have '"Anti-Flood" (' "LL status mod reports anti-flood";
-should_have '"Basic Votes" (' "LL status mod reports basic votes";
-
-# Check Blindfrag specific SoureMod/MetaMod plugins
-should_have '"TF2 Class Restrictions" (' "LL status mod reports class restrictions";
-
-# Verify sending commands is working
+# Verify server responds to commands
 should_echo "sv_cheats" '"sv_cheats" = "0"';
+
+# Check Metamod:Source
+should_echo 'meta version' ' Metamod:Source Version Information'
+
+# Check SourceMod:Source plugins
+should_echo 'sm plugins list' '\[SM\] Listing'
+should_lack 'Unknown command "sm"' 'sm command should be working'
+## general checks
+should_lack 'Successfully updated gamedata file "' 'SourceMod is not self updating'
+should_lack 'SourceMod has been updated, please reload it or restart your server' 'SourceMod is not requesting restart'
+should_lack 'Host_Error: DLL_Crosshairangle: not a client' '2019.03.28 bug not found (https://forums.alliedmods.net/showthread.php?t=315229)'
+should_lack '<Error>' 'no sm plugins showing error state';
+## expected plugins
+should_have 'Admin File Reader' 'Admin file reader plugin';
+should_have 'Anti-Flood' "anti-flood plugin";
+should_have 'Basic Comm Control' 'Basic comm control plugin';
+should_have 'Basic Info Triggers' 'Basic info triggers plugin';
+should_have ' "get5" (' 'Get5 plugin'
+should_have 'Log Connections - LL Mod' 'LL version of "log connections" plugin';
+should_have '"TF2 Class Restrictions" (' "Class restrictions mod";
+
+## unexpected plugins
+should_lack ' "Fun Commands' "source mod plugin 'fun commands' should not be loaded"
+should_lack ' "Fun Votes' "source mod plugin 'fun votes' should not be loaded"
+should_lack ' "Nextmap' "source mod plugin 'nextmap' should not be loaded"
+should_lack ' "Reserved Slots' "source mod plugin 'reserved slots' should not be loaded"
+should_lack ' "Sound Commands" (' "source mod plugin 'sound commands' should not be loaded"
 #####################################################################################################
 #####################################################################################################
 
