@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "blindfrag",
+        "DOCKERHUB",
         "Dockerized",
         "freeplay",
         "gamesvr",
@@ -24,7 +25,7 @@
         "**/Thumbs.db": true
     },
     "markdownlint.ignore": [
-        "LICENSE"
+        ".gitkeep", "LICENSE"
     ],
     "shellcheck.exclude": ["1091"],
     "[markdown]": {
@@ -35,5 +36,9 @@
         "editor.unicodeHighlight.ambiguousCharacters": true,
         "editor.unicodeHighlight.invisibleCharacters": true,
         "editor.wordWrap": "on"
+    },
+    "[shellscript]": {
+        "editor.rulers": [100],
+        "files.eol": "\n"
     }
 }
